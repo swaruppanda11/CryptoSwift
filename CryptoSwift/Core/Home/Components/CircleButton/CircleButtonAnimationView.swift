@@ -1,0 +1,25 @@
+//
+//  CircleButtonAnimationView.swift
+//  CryptoSwift
+//
+//  Created by Swarup Panda on 01/01/26.
+//
+
+import SwiftUI
+
+struct CircleButtonAnimationView: View {
+    
+    @Binding var animate: Bool
+    
+    var body: some View {
+        Circle()
+            .stroke(lineWidth: 5.0)
+            .scale(animate ? 1.0 : 0.0)
+            .opacity(animate ? 1.0 : 0.0)
+            .animation(animate ? .easeInOut(duration: 1.0) : .none, value: animate)
+    }
+}
+
+#Preview {
+    CircleButtonAnimationView(animate : .constant(false))
+}
