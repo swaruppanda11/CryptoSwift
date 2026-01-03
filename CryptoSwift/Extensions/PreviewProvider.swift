@@ -23,4 +23,5 @@ class DeveloperPreview {
     private init() { }
     
     let coin = CoinModel.example
+    let homeVM = HomeViewModel()
 }
